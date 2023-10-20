@@ -39,11 +39,30 @@ documentation:
     - input_data
     - clk
     - en
+    - none
+    - none
+    - none
+    - none
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
     - output_data
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
   # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
 
 
 # The following fields are optional
