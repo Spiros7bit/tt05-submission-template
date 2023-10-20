@@ -38,7 +38,7 @@
 
 `timescale 1 ns / 1 ns
 
-module mlhdlc_sfir_fixpt
+module tt_um_mlhdlc_sfir_fixpt
           (clk,
            reset,
            clk_enable,
