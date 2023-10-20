@@ -38,8 +38,13 @@
 
 `timescale 1 ns / 1 ns
 
-module tt_um_mlhdlc_sfir_fixpt
-          (clk,
+module tt_um_mlhdlc_sfir_fixpt #( parameter MAX_COUNT = 24'd10_000_000 )
+          (input  wire [7:0] ui_in,    // Dedicated inputs - connected to the input switches
+           output wire [7:0] uo_out,   // Dedicated outputs - connected to the HEX0 - 7 segment display
+           input  wire [7:0] uio_in,   // IOs: Bidirectional Input path
+           output wire [7:0] uio_out,  // IOs: Bidirectional Output path
+           output wire [7:0] uio_oe,   // IOs: Bidirectional Enable path (active high: 0=input, 1=output)
+           clk,
            reset,
            clk_enable,
            x_in,
@@ -60,7 +65,7 @@ module tt_um_mlhdlc_sfir_fixpt
   input   signed [13:0] h_in2;  // sfix14_En16
   input   [13:0] h_in3;  // ufix14_En16
   input   [13:0] h_in4;  // ufix14_En15
-  output  ce_out;
+  output  ce_out = uo_out [0];
   output  signed [13:0] y_out;  // sfix14_En12
   output  signed [13:0] delayed_xout;  // sfix14_En12
 
