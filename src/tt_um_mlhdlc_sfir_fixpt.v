@@ -36,7 +36,7 @@
 // 
 // -------------------------------------------------------------
 
-`timescale 1 ns / 1 ns
+//`timescale 1 ns / 1 ns
 
 module tt_um_mlhdlc_sfir_fixpt #( parameter MAX_COUNT = 24'd10_000_000 )
           (input  wire [7:0] ui_in,    // Dedicated inputs - connected to the input switches
