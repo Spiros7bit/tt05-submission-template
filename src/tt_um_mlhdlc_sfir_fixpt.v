@@ -65,7 +65,7 @@ module tt_um_mlhdlc_sfir_fixpt #( parameter MAX_COUNT = 24'd10_000_000 )
   input   signed [13:0] h_in2;  // sfix14_En16
   input   [13:0] h_in3;  // ufix14_En16
   input   [13:0] h_in4;  // ufix14_En15
-  output  ce_out = uo_out [0];
+  output  ce_out;
   output  signed [13:0] y_out;  // sfix14_En12
   output  signed [13:0] delayed_xout;  // sfix14_En12
 
